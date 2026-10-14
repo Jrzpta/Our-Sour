@@ -43,6 +43,8 @@ public interface SearchLogRepository extends JpaRepository<SearchLog, Long> {
     List<DailyCount> searchesPerDay(@Param ("since") LocalDateTime since);
 
     interface DailyCount{
+        String getLabel();
+
         Long getTotal();
     }
 

@@ -1,6 +1,7 @@
 package proyecto.ourSour.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -25,7 +26,7 @@ public interface RecipeRepository extends JpaRepository<Recipe, Long>{
             left join fetch r.product
             where r.id = :id
             """) 
-    List<Recipe> findByWithDetails(@Param("id") Long id);
+    Optional<Recipe> findByIdWithDetails(@Param ("id") Long id);
 
 
 
