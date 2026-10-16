@@ -31,11 +31,10 @@ public class Product {
 
     // STOCK SIMULADO (CU-05)
     @Column (nullable = false)
-    private int Stock;
+    private int stock;
 
     // DESACTIVAR UN PRODUCTO NO LO BORRA, CONSERVA EL HISTORIAL DE PEDIDOS
     @Column (nullable = false)
-    private boolean active = true;
-    
+    private boolean active = true; 
 
 }
